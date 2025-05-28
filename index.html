@@ -166,79 +166,45 @@
         </p>
         <ul class="list-disc list-inside space-y-4 pl-4 text-xl text-gray-700">
 <!--             <li><strong>Submission Deadline:</strong> <span class="text-red-600", id="countdown">Extended to Sept 26, 2026, 23:59 UTC-0.</span></li> -->
-                 <li>
-                  <strong>Submission Deadline:</strong> 
-                  <span class="text-red-600" id="countdown">Extended to Sept 26, 2026, 23:59 UTC-0.</span>
-                  (<span id="countdown-timer"></span>)
-                </li>
+                 <li><strong>Submission Deadline:</strong> <span class="text-red-600">Extended to Sept 26, 2026, 23:59 UTC-0 (<span id="countdown"></span>)</span></li>
                 <script>
-                  // Set the deadline date (Sept 26, 2026, 23:59 UTC)
-                  const deadline = new Date('2026-09-26T23:59:00Z');
-                  
-                  function updateCountdown() {
+                function updateCountdown() {
+                    const deadline = new Date("2026-09-26T23:59:00Z");
                     const now = new Date();
-                    const diff = deadline - now;
-                    
-                    // Calculate days, hours, minutes, seconds
-                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((diff % (1000 * 60)) / 1000;
-                    
-                    // Display the countdown
-                    document.getElementById('countdown-timer').innerHTML = 
-                      `${days}d ${hours}h ${minutes}m ${Math.floor(seconds)}s`;
-                    
-                    // Update every second
-                    if (diff > 0) {
-                      setTimeout(updateCountdown, 1000);
-                    } else {
-                      document.getElementById('countdown-timer').innerHTML = "Deadline passed";
+                    const timeDiff = deadline - now;
+                    if (timeDiff <= 0) {
+                        document.getElementById("countdown").textContent = "Expired";
+                        return;
                     }
-                  }
-                  
-                  // Start the countdown
-                  updateCountdown();
+                    const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+                    document.getElementById("countdown").textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                }
+                updateCountdown();
+                setInterval(updateCountdown, 1000);
                 </script>
-
 <!--             <li><strong>Workshop Accept/Reject Notification:</strong> Oct 09 '24 (Anywhere on Earth).</li> -->
-                <li>
-                  <strong>Workshop Accept/Reject Notification:</strong> 
-                  Oct 09 '24 (Anywhere on Earth)
-                  (<span id="workshop-countdown"></span>)
-                </li>
-                
+                <li><strong>Workshop Accept/Reject Notification:</strong> Oct 09 '24 (Anywhere on Earth) (<span id="notification-countdown" class="text-gray-700"></span>)</li>
                 <script>
-                  // Set the notification date (Oct 09, 2024, 23:59 UTC-12 - "Anywhere on Earth" time)
-                  const workshopDeadline = new Date('2024-10-09T23:59:00-12:00');
-                  
-                  function updateWorkshopCountdown() {
+                function updateNotificationCountdown() {
+                    const deadline = new Date("2024-10-09T23:59:00-12:00");
                     const now = new Date();
-                    const diff = workshopDeadline - now;
-                    
-                    // Calculate time units
-                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((diff % (1000 * 60)) / 1000;
-                    
-                    // Display the countdown
-                    document.getElementById('workshop-countdown').innerHTML = 
-                      `${days}d ${hours}h ${minutes}m ${Math.floor(seconds)}s`;
-                    
-                    // Update every second
-                    if (diff > 0) {
-                      setTimeout(updateWorkshopCountdown, 1000);
-                    } else {
-                      document.getElementById('workshop-countdown').innerHTML = "Deadline passed";
+                    const timeDiff = deadline - now;
+                    if (timeDiff <= 0) {
+                        document.getElementById("notification-countdown").textContent = "Expired";
+                        return;
                     }
-                  }
-                  
-                  // Start the countdown
-                  updateWorkshopCountdown();
+                    const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+                    document.getElementById("notification-countdown").textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                }
+                updateNotificationCountdown();
+                setInterval(updateNotificationCountdown, 1000);
                 </script>
-
-                
         </ul>
     </section>
 
