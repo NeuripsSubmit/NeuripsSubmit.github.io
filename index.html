@@ -1,4 +1,4 @@
-<!-- <script type="text/javascript">
+<script type="text/javascript">
         var gk_isXlsx = false;
         var gk_xlsxFileLookup = {};
         var gk_fileData = {};
@@ -37,12 +37,10 @@
         }
         return gk_fileData[filename] || "";
         }
-        </script><!DOCTYPE html>
--->
-<html lang="en">
+        </script><html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>AIM-FM Workshop @ NeurIPS'24</title>
     <!-- Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -53,50 +51,54 @@
     <!-- Navigation Bar -->
     <nav class="bg-white shadow-md">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="text-xl font-semibold text-gray-900">AIM-FM Workshop @ NeurIPS'24</div>
-            <div class="flex space-x-4">
-<!--                 <a href="./" class="text-gray-600 hover:text-gray-900">Home</a> -->
-                <a href="#overview" class="text-gray-600 hover:text-gray-900">Overview</a>
-                <a href="#Topics" class="text-gray-600 hover:text-gray-900">Topics</a>
-                <a href="#Schedule" class="text-gray-600 hover:text-gray-900">Schedule</a>
-                <a href="#Submissions" class="text-gray-600 hover:text-gray-900">Submissions</a>
-                <a href="#speakers" class="text-gray-600 hover:text-gray-900">Speakers</a>
-                <a href="#organizers" class="text-gray-600 hover:text-gray-900">Senior Organizers</a>
-                <a href="#students-organizers" class="text-gray-600 hover:text-gray-900">Organizers</a>
-                <a href="#Previous Workshops" class="text-gray-600 hover:text-gray-900">Previous Workshops</a>
-                <a href="#Contact" class="text-gray-600 hover:text-gray-900">Contact</a>
+            <div class="text-lg sm:text-xl font-semibold text-gray-900">AIM-FM Workshop @ NeurIPS'24</div>
+            <!-- Hamburger Icon for Mobile -->
+            <button id="menu-toggle" class="sm:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+            <!-- Navigation Links -->
+            <div id="nav-links" class="hidden sm:flex sm:space-x-4 flex-col sm:flex-row absolute sm:static top-16 left-0 w-full sm:w-auto bg-white sm:bg-transparent shadow-md sm:shadow-none p-4 sm:p-0">
+                <a href="#overview" class="text-gray-600 hover:text-gray-900 py-2 sm:py-0">Overview</a>
+                <a href="#Topics" class="text-gray-600 hover:text-gray-900 py-2 sm:py-0">Topics</a>
+                <a href="#Schedule" class="text-gray-600 hover:text-gray-900 py-2 sm:py-0">Schedule</a>
+                <a href="#Submissions" class="text-gray-600 hover:text-gray-900 py-2 sm:py-0">Submissions</a>
+                <a href="#speakers" class="text-gray-600 hover:text-gray-900 py-2 sm:py-0">Speakers</a>
+                <a href="#organizers" class="text-gray-600 hover:text-gray-900 py-2 sm:py-0">Senior Organizers</a>
+                <a href="#students-organizers" class="text-gray-600 hover:text-gray-900 py-2 sm:py-0">Organizers</a>
+                <a href="#Previous Workshops" class="text-gray-600 hover:text-gray-900 py-2 sm:py-0">Previous Workshops</a>
+                <a href="#Contact" class="text-gray-600 hover:text-gray-900 py-2 sm:py-0">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-cover bg-center py-8 text-center" style="background-image: url('/static/images/background2.jpg');">
+    <section class="bg-cover bg-center py-8 sm:py-16 text-center" style="background-image: url('/static/images/background2.jpg');">
         <div class="container mx-auto px-4">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-wider mb-4">
+            <h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-wider mb-4">
                 AIM-FM: Advancements In Medical Foundation Models: Explainability, Robustness, Security, and Beyond
             </h1>
-            <p class="text-lg md:text-xl text-white mb-8">
+            <p class="text-base sm:text-lg md:text-xl text-white mb-8">
                 Towards next-generation medical analysis: Unlock the potential of medical foundation models for more explainable, robust, secure diagnosis solutions
             </p>
-            <p class="text-xl font-extrabold text-white mb-4">
+            <p class="text-lg sm:text-xl font-extrabold text-white mb-4">
                 <i class="fas fa-star"></i> Co-located with NeurIPS'24
             </p>
-            <p class="text-xl font-extrabold text-white mb-4">
+            <p class="text-lg sm:text-xl font-extrabold text-white mb-4">
                 <i class="fas fa-calendar"></i> December 14, 2024
             </p>
-            <p class="text-xl font-extrabold text-white mb-4">
+            <p class="text-lg sm:text-xl font-extrabold text-white mb-4">
                 <i class="fas fa-map"></i> Vancouver Convention Center [East Ballroom A, B]
             </p>
-            <p class="text-xl font-extrabold text-white">
+            <p class="text-lg sm:text-xl font-extrabold text-white">
                 <i class="fas fa-search-plus"></i> <a href="https://us06web.zoom.us/j/86594721715?pwd=2XPKlzSfQIDbaz702qqaaeccqFGfBj.1" target="_blank" rel="noopener noreferrer" class="text-white hover:underline">Zoom</a> [Password: AIM-FM2024]
             </p>
         </div>
     </section>
 
     <!-- Overview Section -->
-    <section class="container mx-auto px-4 py-12">
-        <h2 class="text-4xl font-extrabold text-gray-900 mb-4" id="overview">Overview</h2>
-        <p class="text-xl text-gray-700">
+    <section class="container mx-auto px-4 py-8 sm:py-12">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-gray-900 mb-4" id="overview">Overview</h2>
+        <p class="text-base sm:text-xl text-gray-700">
             There have been notable advancements in large foundation models (FMs), which exhibit generalizable language understanding, visual recognition, and audio comprehension capabilities. These advancements highlight the potential of personalized AI assistants in efficiently assisting with daily tasks, ultimately enhancing human life. <br><br>
             Healthcare is one of the most crucial industries touching every individual. Yet, due to large populations and limited medical professionals, it faces significant challenges, including the high cost and low doctor-to-population ratio. This shortage is more pronounced in rural and developing regions, where access to qualified doctors is severely limited, exacerbating health disparities and preventing timely treatment for common and complex conditions alike. <strong><em>Hence, there is a critical need to develop effective, affordable, and professional AI-driven medical assistants</em></strong>. <br><br>
             Despite the great success in general domains, FMs struggle in specific domains requiring strict professional qualifications, such as healthcare, which has high sensitivity and security risk. In light of the growing healthcare demands, <strong><em>this workshop aims to explore the potential of Medical Foundation Models (MFMs) in smart medical assistance, thereby improving patient outcomes and streamlining clinical workflows</em></strong>. Considering the primary clinical needs, we emphasize the <strong><em>explainability, robustness, and security</em></strong> of the large-scale multimodal medical assistant, pushing forward its reliability and trustworthiness. By bringing together expertise in diverse fields, we hope to bridge the gap between industry and academia regarding precision medicine, highlighting clinical requirements, inherent concerns, and AI solutions. Through this cooperative endeavor, we aim to unlock the potential of MFMs, striving for groundbreaking advancements in healthcare.
@@ -104,10 +106,10 @@
     </section>
 
     <!-- Topics of Interest Section -->
-    <section class="container mx-auto px-4 py-12">
-        <h2 class="text-4xl font-extrabold text-gray-900 mb-4" id="Topics">Topics of Interest</h2>
-        <p class="text-xl text-gray-700 mb-8">Key topics of interest for the workshop may cover, but are not limited to, the following aspects.</p>
-        <ul class="list-disc list-inside space-y-4 pl-4 text-xl text-gray-700">
+    <section class="container mx-auto px-4 py-8 sm:py-12">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-gray-900 mb-4" id="Topics">Topics of Interest</h2>
+        <p class="text-base sm:text-xl text-gray-700 mb-8">Key topics of interest for the workshop may cover, but are not limited to, the following aspects.</p>
+        <ul class="list-disc list-inside space-y-4 pl-4 text-base sm:text-xl text-gray-700">
             <li><strong>MFMs at Scale</strong>: Develop large-scale medical foundation models applicable for hospital use, including diagnosis, prognosis, treatment, and surgical assistance.</li>
             <li><strong>Explainable MFMs</strong>: Open the black box of MFMs in medical decision-making, ensuring transparency and interpretability.</li>
             <li><strong>Robust Diagnosis</strong>: Enhance the robustness of MFMs in diverse medical scenarios: scarcity/misalignment of medical data, parameter-efficient tuning, and validation techniques.</li>
@@ -123,9 +125,9 @@
     </section>
 
     <!-- Schedule Section -->
-    <section class="container mx-auto px-4 py-12">
-        <h2 class="text-4xl font-extrabold text-gray-900 mb-4" id="Schedule">Schedule</h2>
-        <div class="text-xl text-gray-700">
+    <section class="container mx-auto px-4 py-8 sm:py-12">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-gray-900 mb-4" id="Schedule">Schedule</h2>
+        <div class="text-base sm:text-xl text-gray-700">
             <p class="font-bold mb-4">Morning Session</p>
             <ul class="list-disc list-inside space-y-4 pl-4">
                 <li><strong>8:20 - 8:30 AM:</strong> Introduction</li>
@@ -156,309 +158,227 @@
     </section>
 
     <!-- Submissions Section -->
-    <section class="container mx-auto px-4 py-12">
-        <h2 class="text-4xl font-extrabold text-gray-900 mb-4" id="Submissions">Submissions</h2>
-        <p class="text-xl text-gray-700 mb-8">
+    <section class="container mx-auto px-4 py-8 sm:py-12">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-gray-900 mb-4" id="Submissions">Submissions</h2>
+        <p class="text-base sm:text-xl text-gray-700 mb-8">
             The main text of a submitted paper is limited to <strong>nine content pages</strong>, including all figures and tables. 
             Authors are encouraged to submit a separate ZIP file that contains any supplementary material, such as data or source code, when applicable.
             The submission must be formatted using the <a href="https://github.com/AIM-FM-24/NeurIPS/blob/main/static/AIM-FM-24.zip" class="text-blue-600 hover:underline">NeurIPS'24 template</a> and will be collected on the <a href="https://openreview.net/group?id=NeurIPS.cc/2024/Workshop/AIM-FM" class="text-blue-600 hover:underline">OpenReview</a> website, where the files must be in PDF format as a single PDF file.
             The reviewing process will be <strong>double-blind</strong>, and all submissions must be anonymized. This means that you should not include any author names, author affiliations, acknowledgments, or any other identifying information in your submission.
         </p>
-        <ul class="list-disc list-inside space-y-4 pl-4 text-xl text-gray-700">
-<!--             <li><strong>Submission Deadline:</strong> <span class="text-red-600", id="countdown">Extended to Sept 26, 2026, 23:59 UTC-0.</span></li> -->
-                 <li><strong>Submission Deadline:</strong> <span class="text-red-600">Extended to Sept 26, 2026, 23:59 UTC-0 (<span id="countdown"></span>)</span></li>
-                <script>
-                function updateCountdown() {
-                    const deadline = new Date("2026-09-26T23:59:00Z");
-                    const now = new Date();
-                    const timeDiff = deadline - now;
-                    if (timeDiff <= 0) {
-                        document.getElementById("countdown").textContent = "Expired";
-                        return;
-                    }
-                    const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-                    document.getElementById("countdown").textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-                }
-                updateCountdown();
-                setInterval(updateCountdown, 1000);
-                </script>
-<!--             <li><strong>Workshop Accept/Reject Notification:</strong> Oct 09 '24 (Anywhere on Earth).</li> -->
-                <li><strong>Workshop Accept/Reject Notification:</strong> Oct 09, 2026, 23:59 (Anywhere on Earth) (<span id="notification-countdown" class="text-gray-700"></span>)</li>
-                <script>
-                function updateNotificationCountdown() {
-                    const deadline = new Date("2026-10-09T23:59:00-12:00");
-                    const now = new Date();
-                    const timeDiff = deadline - now;
-                    if (timeDiff <= 0) {
-                        document.getElementById("notification-countdown").textContent = "Expired";
-                        return;
-                    }
-                    const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-                    const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
-                    const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
-                    document.getElementById("notification-countdown").textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-                }
-                updateNotificationCountdown();
-                setInterval(updateNotificationCountdown, 1000);
-                </script>
+        <ul class="list-disc list-inside space-y-4 pl-4 text-base sm:text-xl text-gray-700">
+            <li><strong>Submission Deadline:</strong> <span class="text-red-600">Extended to Sept 26, 2026, 23:59 UTC-0 (<span id="countdown"></span>)</span></li>
+            <li><strong>Workshop Accept/Reject Notification:</strong> Oct 09, 2026, 23:59 (Anywhere on Earth) (<span id="notification-countdown" class="text-gray-700"></span>)</li>
         </ul>
     </section>
 
     <!-- Invited Speakers and Panelists Section -->
-    <section class="container mx-auto px-4 py-12">
-        <h2 class="text-4xl font-extrabold text-gray-900 mb-4" id="speakers">Invited Speakers and Panelists</h2>
-        <div class="grid md:grid-cols-4 gap-4">
-            <!--<div class="grid gap-4">
-                <div class="py-4 max-w-sm rounded overflow-hidden shadow-lg">
-                    <a href="https://www.eas.caltech.edu/people/anima" target="_blank" rel="noopener noreferrer">
-                        <img src="/static/images/AnimashreeAnandkumar.png" alt="Prof. Animashree Anandkumar" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;">
-                    </a>
-                </div>
-                <div class="px-6 py-4">
-                    <h3 class="text-xl font-bold mb-2"><a href="https://www.eas.caltech.edu/people/anima" target="_blank" rel="noopener noreferrer">Prof. Animashree Anandkumar</a></h3>
-                    <p class="text-gray-700">Bren Professor at California Institute of Technology, Pasadena, CA; Senior Director of AI Research at NVIDIA, Santa Clara, CA.</p>
-                </div>
-            </div>
-            <div class="grid gap-4">
-                <div class="py-4 max-w-sm rounded overflow-hidden shadow-lg">
-                    <a href="https://research.google/people/ShekoofehAzizi/" target="_blank" rel="noopener noreferrer">
-                        <img src="/static/images/ShekoofehAzizi.png" alt="Dr. Shekoofeh Azizi" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;">
-                    </a>
-                </div>
-                <div class="px-6 py-4">
-                    <h3 class="text-xl font-bold mb-2"><a href="https://research.google/people/ShekoofehAzizi/" target="_blank" rel="noopener noreferrer">Dr. Shekoofeh Azizi</a></h3>
-                    <p class="text-gray-700">Staff research scientist at Google DeepMind (formerly Google Brain) and a research lead for Health AI at Google DeepMind, Canada.</p>
-                </div>
-            </div>-->
-            <div class="grid gap-4">
-                <div class="py-4 max-w-sm rounded overflow-hidden shadow-lg">
+    <section class="container mx-auto px-4 py-8 sm:py-12">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-gray-900 mb-4" id="speakers">Invited Speakers and Panelists</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="py-4">
                     <a href="https://www.ucl.ac.uk/ioo/people/pearse-keane" target="_blank" rel="noopener noreferrer">
-                        <img src="/static/images/PearseKeane.png" alt="Prof. Pearse Keane" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;">
+                        <img src="/static/images/PearseKeane.png" alt="Prof. Pearse Keane" class="w-full max-h-48 h-auto object-contain mx-auto">
                     </a>
                 </div>
-                <div class="px-6 py-4">
-                    <h3 class="text-xl font-bold mb-2"><a href="https://www.ucl.ac.uk/ioo/people/pearse-keane" target="_blank" rel="noopener noreferrer">Prof. Pearse Keane</a></h3>
-                    <p class="text-gray-700">Professor of Artificial Medical Intelligence at UCL Institute of Ophthalmology; Consultant Ophthalmologist at Moorfields Eye Hospital, London.</p>
+                <div class="px-4 sm:px-6 py-4">
+                    <h3 class="text-lg sm:text-xl font-bold mb-2"><a href="https://www.ucl.ac.uk/ioo/people/pearse-keane" target="_blank" rel="noopener noreferrer">Prof. Pearse Keane</a></h3>
+                    <p class="text-gray-700 text-sm sm:text-base">Professor of Artificial Medical Intelligence at UCL Institute of Ophthalmology; Consultant Ophthalmologist at Moorfields Eye Hospital, London.</p>
                 </div>
             </div>
-            <div class="grid gap-4">
-                <div class="py-4 max-w-sm rounded overflow-hidden shadow-lg">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="py-4">
                     <a href="https://cobweb.cs.uga.edu/~tliu/" target="_blank" rel="noopener noreferrer">
-                        <img src="/static/images/TianmingLiu.png" alt="Prof. Tianming Liu" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;">
+                        <img src="/static/images/TianmingLiu.png" alt="Prof. Tianming Liu" class="w-full max-h-48 h-auto object-contain mx-auto">
                     </a>
                 </div>
-                <div class="px-6 py-4">
-                    <h3 class="text-xl font-bold mb-2"><a href="https://cobweb.cs.uga.edu/~tliu/" target="_blank" rel="noopener noreferrer">Prof. Tianming Liu</a></h3>
-                    <p class="text-gray-700">Distinguished Research Professor at University of Georgia (UGA), USA; Director of UGA Bioimaging Research Center, UGA Institute of Bioinformatics, and UGA Institute of Artificial Intelligence.</p>
+                <div class="px-4 sm:px-6 py-4">
+                    <h3 class="text-lg sm:text-xl font-bold mb-2"><a href="https://cobweb.cs.uga.edu/~tliu/" target="_blank" rel="noopener noreferrer">Prof. Tianming Liu</a></h3>
+                    <p class="text-gray-700 text-sm sm:text-base">Distinguished Research Professor at University of Georgia (UGA), USA; Director of UGA Bioimaging Research Center, UGA Institute of Bioinformatics, and UGA Institute of Artificial Intelligence.</p>
                 </div>
             </div>
-            <!--<div class="grid gap-4">
-                <div class="py-4 max-w-sm rounded overflow-hidden shadow-lg">
-                    <a href="https://dms.hms.harvard.edu/people/faisal-mahmood" target="_blank" rel="noopener noreferrer">
-                        <img src="/static/images/mahmood_faisal.png" alt="Prof. Faisal Mahmood" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;">
-                    </a>
-                </div>
-                <div class="px-6 py-4">
-                    <h3 class="text-xl font-bold mb-2"><a href="https://dms.hms.harvard.edu/people/faisal-mahmood" target="_blank" rel="noopener noreferrer">Prof. Faisal Mahmood</a></h3>
-                    <p class="text-gray-700">Associate Professor at Harvard Medical School, USA; Lead Investigator of Brigham and Women's Hospital.</p>
-                </div>
-            </div>-->
-            <div class="grid gap-4">
-                <div class="py-4 max-w-sm rounded overflow-hidden shadow-lg">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="py-4">
                     <a href="https://www.karansinghal.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="/static/images/karan.png" alt="Karan Singhal" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;">
+                        <img src="/static/images/karan.png" alt="Karan Singhal" class="w-full max-h-48 h-auto object-contain mx-auto">
                     </a>
                 </div>
-                <div class="px-6 py-4">
-                    <h3 class="text-xl font-bold mb-2"><a href="https://www.karansinghal.com/" target="_blank" rel="noopener noreferrer">Karan Singhal</a></h3>
-                    <p class="text-gray-700">Staff research scientist at OpenAI, co-leading teams working on medical AI, foundation models, USA.</p>
+                <div class="px-4 sm:px-6 py-4">
+                    <h3 class="text-lg sm:text-xl font-bold mb-2"><a href="https://www.karansinghal.com/" target="_blank" rel="noopener noreferrer">Karan Singhal</a></h3>
+                    <p class="text-gray-700 text-sm sm:text-base">Staff research scientist at OpenAI, co-leading teams working on medical AI, foundation models, USA.</p>
                 </div>
             </div>
-            <div class="grid gap-4">
-                <div class="py-4 max-w-sm rounded overflow-hidden shadow-lg">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="py-4">
                     <a href="https://homes.cs.washington.edu/~swang/" target="_blank" rel="noopener noreferrer">
-                        <img src="/static/images/ShengWang.png" alt="Prof. Sheng Wang" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;">
+                        <img src="/static/images/ShengWang.png" alt="Prof. Sheng Wang" class="w-full max-h-48 h-auto object-contain mx-auto">
                     </a>
                 </div>
-                <div class="px-6 py-4">
-                    <h3 class="text-xl font-bold mb-2"><a href="https://homes.cs.washington.edu/~swang/" target="_blank" rel="noopener noreferrer">Prof. Sheng Wang</a></h3>
-                    <p class="text-gray-700">Assistant Professor at University of Washington, Seattle, USA.</p>
+                <div class="px-4 sm:px-6 py-4">
+                    <h3 class="text-lg sm:text-xl font-bold mb-2"><a href="https://homes.cs.washington.edu/~swang/" target="_blank" rel="noopener noreferrer">Prof. Sheng Wang</a></h3>
+                    <p class="text-gray-700 text-sm sm:text-base">Assistant Professor at University of Washington, Seattle, USA.</p>
                 </div>
             </div>
-            <div class="grid gap-4">
-                <div class="py-4 max-w-sm rounded overflow-hidden shadow-lg">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="py-4">
                     <a href="https://www.james-zou.com/" target="_blank" rel="noopener noreferrer">
-                        <img src="/static/images/JamesZou.png" alt="Prof. James Zou" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;">
+                        <img src="/static/images/JamesZou.png" alt="Prof. James Zou" class="w-full max-h-48 h-auto object-contain mx-auto">
                     </a>
                 </div>
-                <div class="px-6 py-4">
-                    <h3 class="text-xl font-bold mb-2"><a href="https://www.james-zou.com/" target="_blank" rel="noopener noreferrer">Prof. James Zou</a></h3>
-                    <p class="text-gray-700">Associate Professor of Biomedical Data Science and, by courtesy, of Computer Science and Electrical Engineering at Stanford University, USA.</p>
+                <div class="px-4 sm:px-6 py-4">
+                    <h3 class="text-lg sm:text-xl font-bold mb-2"><a href="https://www.james-zou.com/" target="_blank" rel="noopener noreferrer">Prof. James Zou</a></h3>
+                    <p class="text-gray-700 text-sm sm:text-base">Associate Professor of Biomedical Data Science and, by courtesy, of Computer Science and Electrical Engineering at Stanford University, USA.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Senior Organizers Section -->
-    <section class="container mx-auto px-4 py-12">
-        <h2 class="text-4xl font-extrabold text-gray-900 mb-4" id="organizers">Senior Organizers</h2>
-        <div class="grid md:grid-cols-4 gap-4">
-            <div class="grid gap-4">
-                <div class="py-4 max-w-sm rounded overflow-hidden shadow-lg">
+    <section class="container mx-auto px-4 py-8 sm:py-12">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-gray-900 mb-4" id="organizers">Senior Organizers</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="py-4">
                     <a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-yixuan-yuan" target="_blank" rel="noopener noreferrer">
-                        <img src="/static/images/YixuanYuan_v2.png" alt="Prof. Yixuan Yuan" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;">
+                        <img src="/static/images/YixuanYuan_v2.png" alt="Prof. Yixuan Yuan" class="w-full max-h-48 h-auto object-contain mx-auto">
                     </a>
                 </div>
-                <div class="px-6 py-4">
-                    <h3 class="text-xl font-bold mb-2"><a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-yixuan-yuan" target="_blank" rel="noopener noreferrer">Prof. Yixuan Yuan</a></h3>
-                    <p class="text-gray-700">Assistant Professor at The Chinese University of Hong Kong, China.</p>
+                <div class="px-4 sm:px-6 py-4">
+                    <h3 class="text-lg sm:text-xl font-bold mb-2"><a href="https://www.ee.cuhk.edu.hk/en-gb/people/academic-staff/professors/prof-yixuan-yuan" target="_blank" rel="noopener noreferrer">Prof. Yixuan Yuan</a></h3>
+                    <p class="text-gray-700 text-sm sm:text-base">Assistant Professor at The Chinese University of Hong Kong, China.</p>
                 </div>
             </div>
-            <div class="grid gap-4">
-                <div class="py-4 max-w-sm rounded overflow-hidden shadow-lg">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="py-4">
                     <a href="https://yaoqin1.github.io/" target="_blank" rel="noopener noreferrer">
-                        <img src="/static/images/y.qin-2024.png" alt="Prof. Yao Qin" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;">
+                        <img src="/static/images/y.qin-2024.png" alt="Prof. Yao Qin" class="w-full max-h-48 h-auto object-contain mx-auto">
                     </a>
                 </div>
-                <div class="px-6 py-4">
-                    <h3 class="text-xl font-bold mb-2"><a href="https://yaoqin1.github.io/" target="_blank" rel="noopener noreferrer">Prof. Yao Qin</a></h3>
-                    <p class="text-gray-700">Assistant Professor at UC Santa Barbara, USA; Senior Research Scientist at Google DeepMind.</p>
+                <div class="px-4 sm:px-6 py-4">
+                    <h3 class="text-lg sm:text-xl font-bold mb-2"><a href="https://yaoqin1.github.io/" target="_blank" rel="noopener noreferrer">Prof. Yao Qin</a></h3>
+                    <p class="text-gray-700 text-sm sm:text-base">Assistant Professor at UC Santa Barbara, USA; Senior Research Scientist at Google DeepMind.</p>
                 </div>
             </div>
-            <div class="grid gap-4">
-                <div class="py-4 max-w-sm rounded overflow-hidden shadow-lg">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="py-4">
                     <a href="https://xiangli-shaun.github.io/" target="_blank" rel="noopener noreferrer">
-                        <img src="/static/images/XiangLi.png" alt="Prof. Xiang Li" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;">
+                        <img src="/static/images/XiangLi.png" alt="Prof. Xiang Li" class="w-full max-h-48 h-auto object-contain mx-auto">
                     </a>
                 </div>
-                <div class="px-6 py-4">
-                    <h3 class="text-xl font-bold mb-2"><a href="https://xiangli-shaun.github.io/" target="_blank" rel="noopener noreferrer">Prof. Xiang Li</a></h3>
-                    <p class="text-gray-700">Assistant Professor at Massachusetts General Hospital and Harvard Medical School, USA.</p>
+                <div class="px-4 sm:px-6 py-4">
+                    <h3 class="text-lg sm:text-xl font-bold mb-2"><a href="https://xiangli-shaun.github.io/" target="_blank" rel="noopener noreferrer">Prof. Xiang Li</a></h3>
+                    <p class="text-gray-700 text-sm sm:text-base">Assistant Professor at Massachusetts General Hospital and Harvard Medical School, USA.</p>
                 </div>
             </div>
-            <div class="grid gap-4">
-                <div class="py-4 max-w-sm rounded overflow-hidden shadow-lg">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="py-4">
                     <a href="https://wei-ying.net/" target="_blank" rel="noopener noreferrer">
-                        <img src="/static/images/Ying_circle_2.png" alt="Prof. Ying Wei" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;">
+                        <img src="/static/images/Ying_circle_2.png" alt="Prof. Ying Wei" class="w-full max-h-48 h-auto object-contain mx-auto">
                     </a>
                 </div>
-                <div class="px-6 py-4">
-                    <h3 class="text-xl font-bold mb-2"><a href="https://wei-ying.net/" target="_blank" rel="noopener noreferrer">Prof. Ying Wei</a></h3>
-                    <p class="text-gray-700">Assistant Professor at Nanyang Technological University, Singapore.</p>
+                <div class="px-4 sm:px-6 py-4">
+                    <h3 class="text-lg sm:text-xl font-bold mb-2"><a href="https://wei-ying.net/" target="_blank" rel="noopener noreferrer">Prof. Ying Wei</a></h3>
+                    <p class="text-gray-700 text-sm sm:text-base">Assistant Professor at Nanyang Technological University, Singapore.</p>
                 </div>
             </div>
-            <div class="grid gap-4">
-                <div class="py-4 max-w-sm rounded overflow-hidden shadow-lg">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="py-4">
                     <a href="https://di.ku.dk/english/staff/?pure=en/persons/644987" target="_blank" rel="noopener noreferrer">
-                        <img src="/static/images/BulatIbragimov.png" alt="Prof. Bulat Ibragimov" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;">
+                        <img src="/static/images/BulatIbragimov.png" alt="Prof. Bulat Ibragimov" class="w-full max-h-48 h-auto object-contain mx-auto">
                     </a>
                 </div>
-                <div class="px-6 py-4">
-                    <h3 class="text-xl font-bold mb-2"><a href="https://di.ku.dk/english/staff/?pure=en/persons/644987" target="_blank" rel="noopener noreferrer">Prof. Bulat Ibragimov</a></h3>
-                    <p class="text-gray-700">Associate Professor at University of Copenhagen, Denmark.</p>
+                <div class="px-4 sm:px-6 py-4">
+                    <h3 class="text-lg sm:text-xl font-bold mb-2"><a href="https://di.ku.dk/english/staff/?pure=en/persons/644987" target="_blank" rel="noopener noreferrer">Prof. Bulat Ibragimov</a></h3>
+                    <p class="text-gray-700 text-sm sm:text-base">Associate Professor at University of Copenhagen, Denmark.</p>
                 </div>
             </div>
-            <div class="grid gap-4">
-                <div class="py-4 max-w-sm rounded overflow-hidden shadow-lg">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="py-4">
                     <a href="https://engineering.ucsb.edu/people/linda-petzold" target="_blank" rel="noopener noreferrer">
-                        <img src="/static/images/LindaPetzold.png" alt="Prof. Linda Petzold" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;">
+                        <img src="/static/images/LindaPetzold.png" alt="Prof. Linda Petzold" class="w-full max-h-48 h-auto object-contain mx-auto">
                     </a>
                 </div>
-                <div class="px-6 py-4">
-                    <h3 class="text-xl font-bold mb-2"><a href="https://engineering.ucsb.edu/people/linda-petzold" target="_blank" rel="noopener noreferrer">Prof. Linda Petzold</a></h3>
-                    <p class="text-gray-700">Mehrabian Distinguished Professor at University of California, Santa Barbara, USA.</p>
+                <div class="px-4 sm:px-6 py-4">
+                    <h3 class="text-lg sm:text-xl font-bold mb-2"><a href="https://engineering.ucsb.edu/people/linda-petzold" target="_blank" rel="noopener noreferrer">Prof. Linda Petzold</a></h3>
+                    <p class="text-gray-700 text-sm sm:text-base">Mehrabian Distinguished Professor at University of California, Santa Barbara, USA.</p>
                 </div>
             </div>
-            <!--<div class="grid gap-4">
-                <div class="py-4 max-w-sm rounded overflow-hidden shadow-lg">
-                    <a href="https://scholar.google.com/citations?user=QulpzUAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-                        <img src="/static/images/WenjianQin.png" alt="Prof. Wenjian Qin" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;">
-                    </a>
-                </div>
-                <div class="px-6 py-4">
-                    <h3 class="text-xl font-bold mb-2"><a href="https://scholar.google.com/citations?user=QulpzUAAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Prof. Wenjian Qin</a></h3>
-                    <p class="text-gray-700">Professor at Shenzhen Institute of Advanced Technology, Chinese Academy of Sciences, China.</p>
-                </div>
-            </div>-->
         </div>
     </section>
 
     <!-- Student Organizers Section -->
-    <section class="container mx-auto px-4 py-12">
-        <h2 class="text-4xl font-extrabold text-gray-900 mb-4" id="students-organizers">Organizers</h2>
-        <div class="grid md:grid-cols-4 gap-4">
-            <div class="grid gap-4">
-                <div class="py-4 max-w-sm rounded overflow-hidden shadow-lg">
+    <section class="container mx-auto px-4 py-8 sm:py-12">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-gray-900 mb-4" id="students-organizers">Organizers</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="py-4">
                     <a href="https://zhihaopeng-cityu.github.io/ZhihaoPENG_homepage/" target="_blank" rel="noopener noreferrer">
-                        <img src="/static/images/ZhihaoPeng.png" alt="Dr. Zhihao Peng" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;">
+                        <img src="/static/images/ZhihaoPeng.png" alt="Dr. Zhihao Peng" class="w-full max-h-48 h-auto object-contain mx-auto">
                     </a>
                 </div>
-                <div class="px-6 py-4">
-                    <h3 class="text-xl font-bold mb-2"><a href="https://zhihaopeng-cityu.github.io/ZhihaoPENG_homepage/" target="_blank" rel="noopener noreferrer">Dr. Zhihao Peng</a></h3>
-                    <p class="text-gray-700">Postdoctoral Fellow at CUHK.</p>
+                <div class="px-4 sm:px-6 py-4">
+                    <h3 class="text-lg sm:text-xl font-bold mb-2"><a href="https://zhihaopeng-cityu.github.io/ZhihaoPENG_homepage/" target="_blank" rel="noopener noreferrer">Dr. Zhihao Peng</a></h3>
+                    <p class="text-gray-700 text-sm sm:text-base">Postdoctoral Fellow at CUHK.</p>
                 </div>
             </div>
-            <div class="grid gap-4">
-                <div class="py-4 max-w-sm rounded overflow-hidden shadow-lg">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="py-4">
                     <a href="https://wymancv.github.io/wuyang.github.io/" target="_blank" rel="noopener noreferrer">
-                        <img src="/static/images/Wuyang2.png" alt="Dr. Wuyang Li" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;">
+                        <img src="/static/images/Wuyang2.png" alt="Dr. Wuyang Li" class="w-full max-h-48 h-auto object-contain mx-auto">
                     </a>
                 </div>
-                <div class="px-6 py-4">
-                    <h3 class="text-xl font-bold mb-2"><a href="https://wymancv.github.io/wuyang.github.io/" target="_blank" rel="noopener noreferrer">Dr. Wuyang Li</a></h3>
-                    <p class="text-gray-700">Postdoctoral Fellow at CUHK.</p>
+                <div class="px-4 sm:px-6 py-4">
+                    <h3 class="text-lg sm:text-xl font-bold mb-2"><a href="https://wymancv.github.io/wuyang.github.io/" target="_blank" rel="noopener noreferrer">Dr. Wuyang Li</a></h3>
+                    <p class="text-gray-700 text-sm sm:text-base">Postdoctoral Fellow at CUHK.</p>
                 </div>
             </div>
-            <div class="grid gap-4">
-                <div class="py-4 max-w-sm rounded overflow-hidden shadow-lg">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="py-4">
                     <a href="https://baifanxxx.github.io/" target="_blank" rel="noopener noreferrer">
-                        <img src="/static/images/FanBai3.png" alt="Dr. Fan Bai" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;">
+                        <img src="/static/images/FanBai3.png" alt="Dr. Fan Bai" class="w-full max-h-48 h-auto object-contain mx-auto">
                     </a>
                 </div>
-                <div class="px-6 py-4">
-                    <h3 class="text-xl font-bold mb-2"><a href="https://baifanxxx.github.io/" target="_blank" rel="noopener noreferrer">Dr. Fan Bai</a></h3>
-                    <p class="text-gray-700">PhD at CUHK.</p>
+                <div class="px-4 sm:px-6 py-4">
+                    <h3 class="text-lg sm:text-xl font-bold mb-2"><a href="https://baifanxxx.github.io/" target="_blank" rel="noopener noreferrer">Dr. Fan Bai</a></h3>
+                    <p class="text-gray-700 text-sm sm:text-base">PhD at CUHK.</p>
                 </div>
             </div>
-            <div class="grid gap-4">
-                <div class="py-4 max-w-sm rounded overflow-hidden shadow-lg">
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="py-4">
                     <a href="https://mehak126.github.io/" target="_blank" rel="noopener noreferrer">
-                        <img src="/static/images/Mehak.png" alt="Mehak Preet Dhaliwal" style="max-width: 100%; max-height: 100%; object-fit: contain; display: block; margin: 0 auto;">
+                        <img src="/static/images/Mehak.png" alt="Mehak Preet Dhaliwal" class="w-full max-h-48 h-auto object-contain mx-auto">
                     </a>
                 </div>
-                <div class="px-6 py-4">
-                    <h3 class="text-xl font-bold mb-2"><a href="https://mehak126.github.io/" target="_blank" rel="noopener noreferrer">Mehak Preet Dhaliwal</a></h3>
-                    <p class="text-gray-700">PhD at University of California, Santa Barbara.</p>
+                <div class="px-4 sm:px-6 py-4">
+                    <h3 class="text-lg sm:text-xl font-bold mb-2"><a href="https://mehak126.github.io/" target="_blank" rel="noopener noreferrer">Mehak Preet Dhaliwal</a></h3>
+                    <p class="text-gray-700 text-sm sm:text-base">PhD at University of California, Santa Barbara.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Previous Workshops Section -->
-    <section class="container mx-auto px-4 py-12">
-        <h2 class="text-4xl font-extrabold text-gray-900 mb-4" id="Previous Workshops">Previous Workshops</h2>
-        <p class="text-xl text-gray-700 mb-8">
+    <section class="container mx-auto px-4 py-8 sm:py-12">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-gray-900 mb-4" id="Previous Workshops">Previous Workshops</h2>
+        <p class="text-base sm:text-xl text-gray-700 mb-8">
             NeurIPS 2024: 1st Workshop on  
             <a href="https://aim-fm-24.github.io/NeurIPS/" class="text-blue-600 hover:underline">AIM-FM: Advancements in Medical Foundation Models</a> 
         </p>
     </section>
-        
+
     <!-- Contact Section -->
-    <section class="container mx-auto px-4 py-12">
-        <h2 class="text-4xl font-extrabold text-gray-900 mb-4" id="Contact">Contact</h2>
-        <p class="text-xl text-gray-700">
+    <section class="container mx-auto px-4 py-8 sm:py-12">
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-gray-900 mb-4" id="Contact">Contact</h2>
+        <p class="text-base sm:text-xl text-gray-700">
             <a href="mailto:aim.fm.neurips24@gmail.com" class="text-blue-600 hover:underline">aim.fm.neurips24@gmail.com</a>
         </p>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-200 py-8">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="text-gray-600">
+    <footer class="bg-gray-200 py-6 sm:py-8">
+        <div class="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
+            <div class="text-gray-600 mb-4 sm:mb-0">
                 <p>Contact: <a href="mailto:aim.fm.neurips24@gmail.com" class="hover:text-gray-900">aim.fm.neurips24@gmail.com</a></p>
                 <div class="flex space-x-4 mt-2">
                     <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-gray-900">
@@ -480,5 +400,50 @@
             </div>
         </div>
     </footer>
+
+    <!-- JavaScript for Hamburger Menu and Countdown -->
+    <script>
+        // Hamburger Menu Toggle
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('hidden');
+        });
+
+        // Submission Deadline Countdown
+        function updateCountdown() {
+            const deadline = new Date("2026-09-26T23:59:00Z");
+            const now = new Date();
+            const timeDiff = deadline - now;
+            if (timeDiff <= 0) {
+                document.getElementById("countdown").textContent = "Expired";
+                return;
+            }
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+            document.getElementById("countdown").textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Notification Deadline Countdown
+        function updateNotificationCountdown() {
+            const deadline = new Date("2026-10-09T23:59:00-12:00");
+            const now = new Date();
+            const timeDiff = deadline - now;
+            if (timeDiff <= 0) {
+                document.getElementById("notification-countdown").textContent = "Expired";
+                return;
+            }
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+            document.getElementById("notification-countdown").textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+        updateNotificationCountdown();
+        setInterval(updateNotificationCountdown, 1000);
+    </script>
 </body>
 </html>
