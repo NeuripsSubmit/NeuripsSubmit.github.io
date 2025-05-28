@@ -61,10 +61,10 @@
                 <a href="#Schedule" class="text-gray-600 hover:text-gray-900">Schedule</a>
                 <a href="#Submissions" class="text-gray-600 hover:text-gray-900">Submissions</a>
                 <a href="#speakers" class="text-gray-600 hover:text-gray-900">Speakers</a>
-                <a href="#organizers" class="text-gray-600 hover:text-gray-900">Organizers</a>
-                <a href="#students-organizers" class="text-gray-600 hover:text-gray-900">Students</a>
-                <a href="#Contact" class="text-gray-600 hover:text-gray-900">Contact</a>
+                <a href="#organizers" class="text-gray-600 hover:text-gray-900">Senior Organizers</a>
+                <a href="#students-organizers" class="text-gray-600 hover:text-gray-900">Organizers</a>
                 <a href="#Previous Workshops" class="text-gray-600 hover:text-gray-900">Previous Workshops</a>
+                <a href="#Contact" class="text-gray-600 hover:text-gray-900">Contact</a>
             </div>
         </div>
     </nav>
@@ -171,7 +171,74 @@
                   <span class="text-red-600" id="countdown">Extended to Sept 26, 2026, 23:59 UTC-0.</span>
                   (<span id="countdown-timer"></span>)
                 </li>
-            <li><strong>Workshop Accept/Reject Notification:</strong> Oct 09 '24 (Anywhere on Earth).</li>
+                <script>
+                  // Set the deadline date (Sept 26, 2026, 23:59 UTC)
+                  const deadline = new Date('2026-09-26T23:59:00Z');
+                  
+                  function updateCountdown() {
+                    const now = new Date();
+                    const diff = deadline - now;
+                    
+                    // Calculate days, hours, minutes, seconds
+                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((diff % (1000 * 60)) / 1000;
+                    
+                    // Display the countdown
+                    document.getElementById('countdown-timer').innerHTML = 
+                      `${days}d ${hours}h ${minutes}m ${Math.floor(seconds)}s`;
+                    
+                    // Update every second
+                    if (diff > 0) {
+                      setTimeout(updateCountdown, 1000);
+                    } else {
+                      document.getElementById('countdown-timer').innerHTML = "Deadline passed";
+                    }
+                  }
+                  
+                  // Start the countdown
+                  updateCountdown();
+                </script>
+
+<!--             <li><strong>Workshop Accept/Reject Notification:</strong> Oct 09 '24 (Anywhere on Earth).</li> -->
+                <li>
+                  <strong>Workshop Accept/Reject Notification:</strong> 
+                  Oct 09 '24 (Anywhere on Earth)
+                  (<span id="workshop-countdown"></span>)
+                </li>
+                
+                <script>
+                  // Set the notification date (Oct 09, 2024, 23:59 UTC-12 - "Anywhere on Earth" time)
+                  const workshopDeadline = new Date('2024-10-09T23:59:00-12:00');
+                  
+                  function updateWorkshopCountdown() {
+                    const now = new Date();
+                    const diff = workshopDeadline - now;
+                    
+                    // Calculate time units
+                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((diff % (1000 * 60)) / 1000;
+                    
+                    // Display the countdown
+                    document.getElementById('workshop-countdown').innerHTML = 
+                      `${days}d ${hours}h ${minutes}m ${Math.floor(seconds)}s`;
+                    
+                    // Update every second
+                    if (diff > 0) {
+                      setTimeout(updateWorkshopCountdown, 1000);
+                    } else {
+                      document.getElementById('workshop-countdown').innerHTML = "Deadline passed";
+                    }
+                  }
+                  
+                  // Start the countdown
+                  updateWorkshopCountdown();
+                </script>
+
+                
         </ul>
     </section>
 
@@ -270,9 +337,9 @@
         </div>
     </section>
 
-    <!-- Organizers Section -->
+    <!-- Senior Organizers Section -->
     <section class="container mx-auto px-4 py-12">
-        <h2 class="text-4xl font-extrabold text-gray-900 mb-4" id="organizers">Organizers</h2>
+        <h2 class="text-4xl font-extrabold text-gray-900 mb-4" id="organizers">Senior Organizers</h2>
         <div class="grid md:grid-cols-4 gap-4">
             <div class="grid gap-4">
                 <div class="py-4 max-w-sm rounded overflow-hidden shadow-lg">
@@ -356,7 +423,7 @@
 
     <!-- Student Organizers Section -->
     <section class="container mx-auto px-4 py-12">
-        <h2 class="text-4xl font-extrabold text-gray-900 mb-4" id="students-organizers">Student Organizers</h2>
+        <h2 class="text-4xl font-extrabold text-gray-900 mb-4" id="students-organizers">Organizers</h2>
         <div class="grid md:grid-cols-4 gap-4">
             <div class="grid gap-4">
                 <div class="py-4 max-w-sm rounded overflow-hidden shadow-lg">
